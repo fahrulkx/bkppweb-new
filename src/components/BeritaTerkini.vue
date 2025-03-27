@@ -1,24 +1,40 @@
 <template>
-  <div class="row mb-4">
-    <div v-for="news in newsList" :key="news.id" class="col-md-4 mt-4">
-      <div class="card">
-        <img
-          :src="`http://bkpp.kendalkab.go.id/packages/photo/${news.fav}`"
-          class="card-img-top"
-          alt="..."
-        />
-        <div class="card-body">
-          <h5 class="card-title">{{ news.titel }}</h5>
-          <p class="card-text">{{ news.desc }}</p>
-          <router-link
-            :to="`/berita/${news.id}`"
-            class="btn btn-success"
-          >Baca Selengkapnya test</router-link>
+  <section class="section">
+    <div class="container">
+      <!-- berita -->
+      <div class="row mt-4">
+        <div class="col">
+          <h2>
+            <strong>Berita Terkini</strong>
+          </h2>
+        </div>
+        <div class="col">
+          <router-link to="/BeritaView" class="btn btn-success float-end">
+            <i class="bi bi-eye"></i> Lihat Semua
+          </router-link>
+        </div>
+      </div>
 
+      <div class="row mb-4">
+        <div v-for="news in newsList" :key="news.id" class="col-md-4 mt-4">
+          <div class="card">
+            <img
+              :src="`http://bkpp.kendalkab.go.id/packages/photo/${news.fav}`"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">{{ news.titel }}</h5>
+              <p class="card-text">{{ news.desc }}</p>
+              <router-link :to="`/berita/${news.id}`" class="btn btn-success"
+                >Baca Selengkapnya test</router-link
+              >
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
