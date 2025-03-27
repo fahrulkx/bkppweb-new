@@ -1,19 +1,5 @@
 <template>
-  <section class="section">
-    <div class="container">
-      <!-- berita -->
-      <div class="row mt-4">
-        <div class="col">
-          <h2>
-            <strong>Berita Terkini</strong>
-          </h2>
-        </div>
-        <div class="col">
-          <router-link to="/BeritaView" class="btn btn-success float-end">
-            <i class="bi bi-eye"></i> Lihat Semua
-          </router-link>
-        </div>
-      </div>
+
 
       <div class="row mb-4">
         <div v-for="news in newsList" :key="news.id" class="col-md-4 mt-4">
@@ -33,8 +19,8 @@
           </div>
         </div>
       </div>
-    </div>
-  </section>
+
+
 </template>
 
 <script>

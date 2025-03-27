@@ -1,20 +1,4 @@
 <template>
-  <section class="section light-background">
-    <div class="container">
-      <!-- Pengumuman -->
-      <div class="row mt-4">
-        <div class="col">
-          <h2>
-            <strong>Pengumuman</strong>
-          </h2>
-        </div>
-        <div class="col">
-          <router-link to="/PengumumanView" class="btn btn-success float-end">
-            <i class="bi bi-eye"></i> Lihat Semua
-          </router-link>
-        </div>
-      </div>
-
       <!-- Daftar Pengumuman -->
       <div v-if="newsList.length" class="row mb-4">
         <div v-for="news in newsList" :key="news.id" class="col-md-12 mt-4">
@@ -37,8 +21,7 @@
 
       <!-- Pesan Saat Loading -->
       <p v-else class="text-center">Memuat pengumuman...</p>
-    </div>
-  </section>
+    
 </template>
 
 <script>
